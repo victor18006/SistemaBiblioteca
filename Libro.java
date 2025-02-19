@@ -14,7 +14,7 @@ public class Libro {
     public String getInformacion() {
         return "Título: " + titulo + "\nAutor: " + autor + "\nAño de Publicación: " + añoPublicacion + "\nISBN: " + isbn + "\nLibro mayor de 20 años: " + esAntiguo();
     }
-
+    
     public boolean esAntiguo(){
         if(añoPublicacion<2005){
             return true;
