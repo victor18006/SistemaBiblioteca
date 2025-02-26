@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Biblioteca {
     private ArrayList<Libro> libros;
@@ -34,5 +35,16 @@ public class Biblioteca {
     @Override
     public String toString() {
         return getLibros();
+    }
+
+    // Método para obtener libros prestados o no prestados
+    public List<Libro> obtenerLibrosPrestados(boolean prestados) {
+        List<Libro> resultado = new ArrayList<>();
+        for (Libro libro : libros) {
+            if (libro.estaPrestado() == prestados) {
+                resultado.add(libro);
+            }
+        }
+        return resultado;
     }
 }
